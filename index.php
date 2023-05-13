@@ -102,7 +102,7 @@ foreach($results as $result)
 							
 						</ul>
 						<?php if(strlen($_SESSION['uid'])==0): ?>
-						<a href="login.php" class="site-btn sb-line-gradient">Booking Now</a>
+						<a href="login.php" class="site-btn sb-line-gradient">Book Now</a>
 						<?php else :?>
 							<!-- <a href="#" class="site-btn sb-line-gradient">Booking Now</a> -->
 							 <form method='post'>

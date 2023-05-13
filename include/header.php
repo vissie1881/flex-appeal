@@ -1,4 +1,26 @@
-	<header class="header-section">
+<script>
+      window.addEventListener('load', function() {
+        // Get the element to modify
+        var home = document.getElementById('home_nav');
+		var about = document.getElementById('about_nav');
+		var contact = document.getElementById('contact_nav');
+        //get address of current page
+		var addr= document.location.href;
+        //switch case to set selected item as active
+		switch(addr){
+			case 'http://localhost/gym/index.php':
+				home.classList.add('active');
+				break;
+			case 'http://localhost/gym/about.php':
+				about.classList.add('active');
+				break;
+			case 'http://localhost/gym/contact.php':
+				contact.classList.add('active');
+				break;
+		}
+        });
+    </script>
+<header class="header-section">
 		<div class="header-top">
 			<div class="row m-0">
 				<div class="col-md-6 d-none d-md-block p-0">
@@ -37,18 +59,20 @@
 		</div>
 		<div class="header-bottom">
 			<a href="index.php" class="site-logo" style="color:#fff; font-weight:bold; font-size:26px;">
-				GYM MS<br />
-				<small style="margin-top:-4%;">Gym Management System</small>
+				GYM NAME<br />
+				<small style="margin-top:-4%;">Gym Motto</small>
 			</a>
 			
 			<div class="container">
 				<ul class="main-menu">
-					<li><a href="index.php" class="active">Home</a></li>
-					<li><a href="about.php">About</a></li>
-					<li><a href="contact.php">Contact</a></li>
+					<li><a href="index.php" id="home_nav">Home</a></li>
+					<li><a href="about.php" id="about_nav">About</a></li>
+					<li><a href="contact.php" id="contact_nav">Contact</a></li>
 					
+					<!--If you add another menu item, be sure to add it in the script on page top-->
+
 					<?php if(strlen($_SESSION['uid'])==0): ?>
-			<li><a href="admin/">Admin</a></li>
+			<!--li><a href="admin/">Admin</a></li-->
 					<?php else :?>
 						<li><a href="booking-history.php">Booking History</a></li>
 						<?php endif;?>

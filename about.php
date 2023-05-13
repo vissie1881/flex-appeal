@@ -58,7 +58,7 @@ echo "<script>window.location.href='booking-history.php'</script>";
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2>About GYM Management System</h2>
+					<h2 class="main_text">About us</h2>
 				</div>
 			</div>
 		</div>
