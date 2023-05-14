@@ -20,7 +20,7 @@ if(isset($_POST['submit'])) {
         /******************** Your code ***********************/
         $_SESSION['adminid']   = $row['id'];
         $_SESSION['email'] = $row['email'];
-        $_SESSION['name'] = $row['fname'];
+        $_SESSION['name'] = $row['name'];
        header("location: index.php");
       } else {
         $msg = "Invalid username and password!";
