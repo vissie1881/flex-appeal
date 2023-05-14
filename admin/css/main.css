@@ -371,10 +371,10 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
   line-height: 1.2;
-  color: inherit;
+  color: whitesmoke;
 }
 
 h1, .h1 {
@@ -14521,8 +14521,9 @@ be a descendant of the grid when it is being dragged.
 }
 
 .material-half-bg .cover {
-  background-color: #009688;
+  background-image: url(../../img/dark-bg-1.jpg);
   height: 50vh;
+  filter: blur(2px);
 }
 
 .m-loader {
@@ -14908,7 +14909,7 @@ be a descendant of the grid when it is being dragged.
   margin-top: 0;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid black;
   text-align: center;
 }
 
@@ -15233,4 +15234,16 @@ be a descendant of the grid when it is being dragged.
 
 .user .user-settings label {
   color: #666;
+}
+
+
+
+/* Added the great tharun*/
+
+#icon-head-logo{
+  color: rgba(58, 58, 59, 0.862);
+}
+
+.login-head{
+  color: rgba(58, 58, 59, 0.862);
 }
