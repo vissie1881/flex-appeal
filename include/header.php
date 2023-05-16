@@ -4,6 +4,8 @@
         var home = document.getElementById('home_nav');
 		var about = document.getElementById('about_nav');
 		var contact = document.getElementById('contact_nav');
+		var dietpro = document.getElementById('dietpro_nav');
+
         //get address of current page
 		var addr= document.location.href;
         //switch case to set selected item as active
@@ -16,6 +18,9 @@
 				break;
 			case 'http://localhost/gym/contact.php':
 				contact.classList.add('active');
+				break;
+			case 'http://localhost/gym/dietpro.php':
+				dietpro.classList.add('active');
 				break;
 		}
         });
@@ -68,7 +73,8 @@
 					<li><a href="index.php" id="home_nav">Home</a></li>
 					<li><a href="about.php" id="about_nav">About</a></li>
 					<li><a href="contact.php" id="contact_nav">Contact</a></li>
-					
+					<li><a href="dietpro.php" id="dietpro_nav">DietPro</a></li>
+
 					<!--If you add another menu item, be sure to add it in the script on page top-->
 
 					<?php if(strlen($_SESSION['uid'])==0): ?>

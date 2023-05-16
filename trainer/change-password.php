@@ -13,7 +13,7 @@ $email=$_SESSION['email'];
 $sql ="SELECT password FROM tbltrainer WHERE email=:email and password=:password";
 $query= $dbh -> prepare($sql);
 $query-> bindParam(':email', $email, PDO::PARAM_STR);
-$query-> bindParam(':password', $password, PDO::PARAM_STR);
+$query-> bindParam(':password', $password, PDO::PARAM_STR); 
 $query-> execute();
 $results = $query -> fetchAll(PDO::FETCH_OBJ);
 if($query -> rowCount() > 0)
