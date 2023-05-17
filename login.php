@@ -34,115 +34,70 @@ if(isset($_POST['submit'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
-<head>
-	<title>Gym Management System</title>
-	<meta charset="UTF-8">
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/nice-select.css"/>
-	<link rel="stylesheet" href="css/magnific-popup.css"/>
-	<link rel="stylesheet" href="css/slicknav.min.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>GYM MS | Admin login</title>
+  </head>
+  <body>
+  <section class="vh-100 "
+   style = "background-image: url(img/gym.avif) ;background-repeat: no-repeat; background-size: cover ">
+   <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+  <div class="container py-5 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-50">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-transparent  text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
 
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
+            <div class="mb-md-5 mt-md-4 pb-5">
 
-</head>
-<body>
-	<!-- Page Preloder -->
-	
+              <h2 class="fw-bold mb-2 text-uppercase">User Login</h2>
 
-	<!-- Header Section -->
-	<?php include 'include/header.php';?>
-	<!-- Header Section end -->
-
-	                                                                              
-	<!-- Page top Section -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2>Login</h2>
-					
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<!-- Pricing Section -->
-	<section class="pricing-section spad">
-		<div class="container">
-			
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					
-				</div>
-				<div class="col-lg-6 col-sm-6">
-					<div class="pricing-item entermediate">
-						<div class="pi-top">
-
-						</div>
-						<div class="pi-price">
-							<h3>User</h3>
-							<p>Login</p>
-						</div>
-						 <?php if($error){?><div class="errorWrap" style="color:red;"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+              <p class="text-white-50 mb-5">Enter your login and password!</p>
+              <form class="login-form" method="post">
+              <?php if($error){?><div class="errorWrap" style="color:red;"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap" style="color:red;"><strong>Error</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+              <div class = "form-group">
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                <label class="form-label" for="typeEmailX">Email</label>
+              </div>
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                <label class="form-label" for="typePasswordX">Password</label><br>
+                <input class="btn btn-outline-light btn-lg px-5" id = "submit" type="submit" name="submit" value="Sign In">
+              </div>
+              </form>
+              <form class="forget-form" action="index.html">
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+              </form>
+            </div>
 
-						<form class="singup-form contact-form" method="post">
-						<div class="row">
-							<div class="col-md-12">
-								<input type="text" name="email" id="email" placeholder="Your Email" autocomplete="off" required>
-							</div>
-							<div class="col-md-12">
-								<input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required>
-							</div>
-							
-							
-						</div>
-						<div class="row">
-					<div class="col-md-6">
-					<input type="submit" id="submit" name="submit" value="Login" class="site-btn sb-gradient">
-					</div>
-<div class="col-md-6">
-	
-<a href="registration.php" class="site-btn sb-gradient">Registration</a>
-					</div>
-				</div>
-	
-</form>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	
-
-	<?php include 'include/footer.php'; ?>
-	<!-- Footer Section end -->
-
-	<div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>
-
-	<!-- Search model end -->
-
-	<!--====== Javascripts & Jquery ======-->
-	<script src="js/vendor/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/main.js"></script>
-
-	</body>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="js/plugins/pace.min.js"></script>
+    <script type="text/javascript">
+      // Login Page Flipbox control
+      $('.login-content [data-toggle="flip"]').click(function() {
+      	$('.login-box').toggleClass('flipped');
+      	return false;
+      });
+    </script>
+  </body>
 </html>
