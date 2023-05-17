@@ -64,8 +64,8 @@
 		</div>
 		<div class="header-bottom">
 			<a href="index.php" class="site-logo" style="color:#fff; font-weight:bold; font-size:26px;">
-				GYM NAME<br />
-				<small style="margin-top:-4%;">Gym Motto</small>
+				BulkBois<br />
+				<!-- <small style="margin-top:-4%;">Gym Motto</small> -->
 			</a>
 			
 			<div class="container">

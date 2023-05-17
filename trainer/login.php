@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 error_reporting(0);
@@ -46,54 +45,43 @@ if(isset($_POST['submit'])) {
     <title>GYM MS | Trainer login</title>
   </head>
   <body>
-    <section class="material-half-bg">
-      <div class="cover"></div>
-    </section>
-    <section class="login-content">
-      <div class="logo">
-        <h1>GYM MS | Trainer login</h1>
-      </div>
-      <div class="login-box">
-        <form class="login-form" method="post">
-          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user" id="icon-head-logo"></i>SIGN IN</h3>
-           <?php if($error){?><div class="errorWrap" style="color:red;"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
+ <section class="vh-100 " style = "background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);">
+  <div class="container py-5 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-50">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark  text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+              <h2 class="fw-bold mb-2 text-uppercase" style="color: white">Trainer Login</h2>
+
+              <p class="text-white-50 mb-5">Enter your login and password</p>
+              <form class="login-form" method="post">
+              <?php if($error){?><div class="errorWrap" style="color:red;"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap" style="color:red;"><strong>Error</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
-          <div class="form-group">
-            <label class="control-label">Emai </label>
-            <input class="form-control" name="email" id="email" type="text" placeholder="Email" autofocus>
-          </div>
-          <div class="form-group">
-            <label class="control-label">PASSWORD</label>
-            <input class="form-control" name="password" id="password" type="password" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <div class="utility">
-      
-  <!--             <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Forgot Password ?</a></p> -->
+              <div class = "form-group">
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                <label class="form-label" for="typeEmailX">Email</label>
+              </div>
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="password" name="password" class="form-control form-control-lg" />
+                <label class="form-label" for="typePasswordX">Password</label><br>
+                <input class="btn btn-outline-light btn-lg px-5" id = "submit" type="submit" name="submit" value="Login">
+              </div>
+              </form>
+              <form class="forget-form" action="index.html">
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+              </form>
             </div>
+
           </div>
-          <div class="form-group btn-container">
-           
-            <input type="submit" name="submit" id="submit" value="SIGN IN" class="btn btn-primary btn-block">
-          </div>
-          <hr />
-          <a href="../index.php">Back to Home Page</a>
-        </form>
-        <form class="forget-form" action="index.html">
-          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Forgot Password ?</h3>
-          <div class="form-group">
-            <label class="control-label">EMAIL</label>
-            <input class="form-control" type="text" placeholder="Email">
-          </div>
-          <div class="form-group btn-container">
-            <button class="btn btn-primary btn-block"><i class="fa fa-unlock fa-lg fa-fw"></i>RESET</button>
-          </div>
-          <div class="form-group mt-3">
-            <p class="semibold-text mb-0"><a href="#" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Back to Login</a></p>
-          </div>
-        </form>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
     <!-- Essential javascripts for application to work-->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>

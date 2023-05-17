@@ -46,20 +46,20 @@ if(isset($_POST['submit'])) {
     <title>GYM MS | Admin login</title>
   </head>
   <body>
-  <section class="vh-100 "
-   style = "background-image: url(img/gym.avif) ;background-repeat: no-repeat; background-size: cover ">
-   <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+  <section class="vh-100 " style = "background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);">
+   <!--style = "background-image: url(img/gym.avif) ;background-repeat: no-repeat; background-size: cover ">-->
+   <!--<div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">-->
   <div class="container py-5 h-50">
     <div class="row d-flex justify-content-center align-items-center h-50">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-transparent  text-white" style="border-radius: 1rem;">
+        <div class="card bg-dark  text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Admin Login</h2>
+              <h2 class="fw-bold mb-2 text-uppercase" style="color: white">Admin Login</h2>
 
-              <p class="text-white-50 mb-5">Enter your login and password!</p>
+              <p class="text-white-50 mb-5">Enter your login and password</p>
               <form class="login-form" method="post">
               <?php if($error){?><div class="errorWrap" style="color:red;"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap" style="color:red;"><strong>Error</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
@@ -71,7 +71,7 @@ if(isset($_POST['submit'])) {
               <div class="form-outline form-white mb-4">
                 <input type="password" id="password" name="password" class="form-control form-control-lg" />
                 <label class="form-label" for="typePasswordX">Password</label><br>
-                <input class="btn btn-outline-light btn-lg px-5" id = "submit" type="submit" name="submit" value="Sign In">
+                <input class="btn btn-outline-light btn-lg px-5" id = "submit" type="submit" name="submit" value="Login">
               </div>
               </form>
               <form class="forget-form" action="index.html">

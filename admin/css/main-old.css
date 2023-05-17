@@ -371,7 +371,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
   line-height: 1.2;
-  color: whitesmoke;
+  color: black;
 }
 
 h1, .h1 {
@@ -13495,9 +13495,7 @@ be a descendant of the grid when it is being dragged.
   min-height: calc(100vh - 50px);
   margin-top: 50px;
   padding: 30px;
-  /*background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
-background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  background-color: #E5E5E5;
   -webkit-transition: margin-left 0.3s ease;
   -o-transition: margin-left 0.3s ease;
   transition: margin-left 0.3s ease;
@@ -13576,7 +13574,7 @@ background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
           flex: 1 0 auto;
   color: #fff;
   text-align: center;
-  font-family:'Bruno Ace SC';
+  font-family: 'Niconne';
   padding: 0 15px;
   font-size: 26px;
   font-weight: 400;
@@ -13870,7 +13868,7 @@ background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
       -ms-flex-align: center;
           align-items: center;
   padding: 12px 15px;
-  font-size: 1.3em;
+  font-size: 1.08em;
   border-left: 3px solid transparent;
   -webkit-transition: border-left-color 0.3s ease,
  background-color 0.3s ease;
@@ -13882,8 +13880,8 @@ background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
 }
 
 .app-menu__item.active, .app-menu__item:hover, .app-menu__item:focus {
-  /*background: #0d1214;*/
-  border-left-color: #503182;
+  background: #0d1214;
+  border-left-color: #009688;
   text-decoration: none;
   color: #fff;
 }
@@ -13903,7 +13901,7 @@ background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
 }
 
 .treeview.is-expanded [data-toggle='treeview'] {
-  border-left-color: #503182;
+  border-left-color: #009688;
   background: #0d1214;
 }
 
@@ -14093,7 +14091,7 @@ background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-          background: linear-gradient(180.2deg, rgb(120, 85, 137) -6.9%, rgb(35, 9, 31) 76.7%);
+  background-color: #FFF;
   margin: -30px -30px 30px;
   padding: 20px 30px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -14881,7 +14879,7 @@ background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
 
 .login-content .logo {
   margin-bottom: 40px;
-  font-family: "Bruno Ace SC";
+  font-family: "Niconne";
   color: #fff;
 }
 
@@ -15254,12 +15252,9 @@ background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
   /* fallback for old browsers */
   background: #6a11cb;
   
-  
+  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to bottom rgba(5, 5, 5, 1), rgba(230, 231, 232, 1));
   
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to bottom, rgba(5, 5, 5, 1), rgba(230, 231, 232, 1));
   }
-
-
-
-  

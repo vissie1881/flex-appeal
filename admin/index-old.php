@@ -17,15 +17,6 @@ if (strlen($_SESSION['adminid']==0)) {
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
-
   </head>
   <body class="app sidebar-mini rtl">
     <!-- Navbar-->
@@ -33,12 +24,16 @@ if (strlen($_SESSION['adminid']==0)) {
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <?php include 'include/sidebar.php'; ?>
-    <main class="app-content bg-dark">
-    
+    <main class="app-content">
+      <div class="app-title">
         <div>
-          <h3><i class="fa fa-dashboard "></i> Dashboard</h3>
+          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
         </div>
-     
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        </ul>
+      </div>
       <div class="row">
           
         <div class="col-md-6 col-lg-6">
@@ -51,7 +46,7 @@ if (strlen($_SESSION['adminid']==0)) {
                   {
                   ?>
                        <a href="add-category.php">  
-          <div class="widget-small icon border border-solid"><i class="icon fa fa-files-o fa-3x"></i>
+          <div class="widget-small info coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
             <div class="info">
               <h4>Listed Categories</h4>
               <p><b><?php echo $result->totalcat;?></b></p>
@@ -70,7 +65,7 @@ if (strlen($_SESSION['adminid']==0)) {
                   {
                   ?>
                        <a href="add-package.php">  
-          <div class="widget-small icon border border-dotted"><i class="icon fa fa-files-o fa-3x"></i>
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
             <div class="info">
               <h4>Listed Package Type</h4>
               <p><b><?php echo $result->totalpackagetype;?></b></p>
@@ -94,7 +89,7 @@ if (strlen($_SESSION['adminid']==0)) {
                   ?>
 
                    <a href="manage-post.php">  
-          <div class="widget-small icon border border-dotted"><i class="icon fa fa-file fa-3x"></i>
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-file fa-3x"></i>
             <div class="info">
               <h4>Listed Packages</h4>
               <p><b><?php echo $result->totalpost;?></b></p>
@@ -115,7 +110,7 @@ if (strlen($_SESSION['adminid']==0)) {
                   {
                   ?>
                   <a href="booking-history.php"> 
-          <div class="widget-small icon border border-solid"><i class="icon fa fa-users fa-3x"></i>
+          <div class="widget-small info coloured-icon"><i class="icon fa fa-users fa-3x"></i>
             <div class="info">
               <h4>Total Bookings</h4>
               <p><b><?php echo $result->totalbookings;?></b></p>
@@ -135,7 +130,7 @@ if (strlen($_SESSION['adminid']==0)) {
                   {
                   ?>
                   <a href="new-bookings.php"> 
-          <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
+          <div class="widget-small danger coloured-icon"><i class="icon fa fa-user fa-3x"></i>
             <div class="info">
               <h4>New Bookings</h4>
               <p><b><?php echo $result->totalbookings;?></b></p>
@@ -156,7 +151,7 @@ if (strlen($_SESSION['adminid']==0)) {
                   {
                   ?>
                   <a href="partial-payment-bookings.php"> 
-          <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
+          <div class="widget-small warning coloured-icon"><i class="icon fa fa-user fa-3x"></i>
             <div class="info">
               <h4>Partial Payment Bookings</h4>
               <p><b><?php echo $result->totalbookings;?></b></p>
@@ -177,7 +172,7 @@ if (strlen($_SESSION['adminid']==0)) {
                   {
                   ?>
                   <a href="full-payment-bookings.php"> 
-          <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
+          <div class="widget-small primary coloured-icon"><i class="icon fa fa-user fa-3x"></i>
             <div class="info">
               <h4>Full Payment Bookings</h4>
               <p><b><?php echo $result->totalbookings;?></b></p>

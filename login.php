@@ -57,7 +57,7 @@ if(isset($_POST['submit'])) {
 
             <div class="mb-md-5 mt-md-4 pb-5">
 
-              <h2 class="fw-bold mb-2 text-uppercase">User Login</h2>
+              <h2 class="fw-bold mb-2 text-uppercase" style="color: white" >User Login</h2>
 
               <p class="text-white-50 mb-5">Enter your login and password!</p>
               <form class="login-form" method="post">
