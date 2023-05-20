@@ -56,7 +56,73 @@ if (isset($_POST['submit'])) {
 
 
 	<!-- Page top Section -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+	<section class="page-top-section set-bg" data-setbg="img/gallery/13.jpg" style="display:none" id="back-img-13">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 m-auto text-white">
+					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+					<p>Let's Get Ya Bulke'n</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-top-section set-bg" data-setbg="img/gallery/7.jpg" style="display:none" id="back-img-7">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 m-auto text-white">
+					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+					<p>Let's Get Ya Bulke'n</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-top-section set-bg" data-setbg="img/gallery/8.jpg" style="display:none" id="back-img-8">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 m-auto text-white">
+					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+					<p>Let's Get Ya Bulke'n</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-top-section set-bg" data-setbg="img/gallery/9.jpg" style="display:none" id="back-img-9">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 m-auto text-white">
+					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+					<p>Let's Get Ya Bulke'n</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-top-section set-bg" data-setbg="img/gallery/10.jpg" style="display:none" id="back-img-10">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 m-auto text-white">
+					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+					<p>Let's Get Ya Bulke'n</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-top-section set-bg" data-setbg="img/gallery/11.jpg" style="display:none" id="back-img-11">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 m-auto text-white">
+					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+					<p>Let's Get Ya Bulke'n</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page-top-section set-bg" data-setbg="img/gallery/12.jpg" style="display:none" id="back-img-12">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
@@ -146,6 +212,56 @@ if (isset($_POST['submit'])) {
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
 
+	<script>
+		var slide1 = document.getElementById('back-img-13');
+		var slide2 = document.getElementById('back-img-7');
+		var slide3 = document.getElementById('back-img-8');
+		var slide4 = document.getElementById('back-img-9');
+		var slide5 = document.getElementById('back-img-10');
+		var slide6 = document.getElementById('back-img-11');
+		var slide7 = document.getElementById('back-img-12');
+		var i = 0;
+		var intervalTime = 3000; // Interval time in milliseconds (3 seconds)
+
+		function changeSlide() {
+			switch (i % 7) {
+				case 0:
+					slide7.style.display = "none";
+					slide1.style.display = "block";
+					break;
+				case 1:
+					slide1.style.display = "none";
+					slide2.style.display = "block";
+					break;
+				case 2:
+					slide2.style.display = "none";
+					slide3.style.display = "block";
+					break;
+				case 3:
+					slide3.style.display = "none";
+					slide4.style.display = "block";
+					break;
+				case 4:
+					slide4.style.display = "none";
+					slide5.style.display = "block";
+					break;
+				case 5:
+					slide5.style.display = "none";
+					slide6.style.display = "block";
+					break;
+				case 6:
+					slide6.style.display = "none";
+					slide7.style.display = "block";
+					break;
+			}
+
+			i++;
+			setTimeout(changeSlide, intervalTime);
+		}
+
+		// Start the slideshow
+		changeSlide();
+	</script>
 </body>
 
 </html>
