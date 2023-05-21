@@ -1,6 +1,6 @@
 <?php session_start();
 error_reporting(0);
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 
 date_default_timezone_set('Asia/Kolkata');
 ini_set('display_errors', 1);

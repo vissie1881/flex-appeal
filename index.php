@@ -55,83 +55,86 @@ if (isset($_POST['submit'])) {
 
 
 
-	<!-- Page top Section -->
-	<section class="page-top-section set-bg" data-setbg="img/gallery/13.jpg" style="display:none" id="back-img-13">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
-					<p>Let's Get Ya Bulke'n</p>
+	<!-- Slideshow start-->
+	<section id="slider-sect">
+		<section class="page-top-section set-bg" data-setbg="img/gallery/13.jpg" style="display:none" id="back-img-13">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+						<p>Let's Get Ya Bulke'n</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="page-top-section set-bg" data-setbg="img/gallery/7.jpg" style="display:none" id="back-img-7">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
-					<p>Let's Get Ya Bulke'n</p>
+		<section class="page-top-section set-bg" data-setbg="img/gallery/7.jpg" style="display:none" id="back-img-7">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+						<p>Let's Get Ya Bulke'n</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="page-top-section set-bg" data-setbg="img/gallery/8.jpg" style="display:none" id="back-img-8">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
-					<p>Let's Get Ya Bulke'n</p>
+		<section class="page-top-section set-bg" data-setbg="img/gallery/8.jpg" style="display:none" id="back-img-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+						<p>Let's Get Ya Bulke'n</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="page-top-section set-bg" data-setbg="img/gallery/9.jpg" style="display:none" id="back-img-9">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
-					<p>Let's Get Ya Bulke'n</p>
+		<section class="page-top-section set-bg" data-setbg="img/gallery/9.jpg" style="display:none" id="back-img-9">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+						<p>Let's Get Ya Bulke'n</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="page-top-section set-bg" data-setbg="img/gallery/10.jpg" style="display:none" id="back-img-10">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
-					<p>Let's Get Ya Bulke'n</p>
+		<section class="page-top-section set-bg" data-setbg="img/gallery/10.jpg" style="display:none" id="back-img-10">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+						<p>Let's Get Ya Bulke'n</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="page-top-section set-bg" data-setbg="img/gallery/11.jpg" style="display:none" id="back-img-11">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
-					<p>Let's Get Ya Bulke'n</p>
+		<section class="page-top-section set-bg" data-setbg="img/gallery/11.jpg" style="display:none" id="back-img-11">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+						<p>Let's Get Ya Bulke'n</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section class="page-top-section set-bg" data-setbg="img/gallery/12.jpg" style="display:none" id="back-img-12">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
-					<p>Let's Get Ya Bulke'n</p>
+		<section class="page-top-section set-bg" data-setbg="img/gallery/12.jpg" style="display:none" id="back-img-12">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">BULK BOIS</h2>
+						<p>Let's Get Ya Bulke'n</p>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	</section>
+	<!-- Slideshow end -->
 
 
 

@@ -1,21 +1,44 @@
 <?php
-session_start();
+
 error_reporting(0);
-include 'include/config.php';
-$uid = $_SESSION['uid'];
+ob_start();
+//DB Connection
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'dietpro');
+// Establish database connection.
+try {
+	$dbh = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+} catch (PDOException $e) {
+	exit("Error: " . $e->getMessage());
+}
+
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if (isset($_POST['submit'])) {
-	$pid = $_POST['pid'];
+	$comorb = $_POST['comorb'];
+	$age = $_POST['age'];
+	$height = $_POST['height'];
+	$weight = $_POST['weight'];
 
+	$bmi = $weight / ($height * $height);
 
-	$sql = "INSERT INTO tblbooking (package_id,userid) Values(:pid,:uid)";
+	$sql = "SELECT m.id as id FROM  mapping m INNER JOIN tblage a ON m.age_id=a.id INNER JOIN tblbmi b ON m.bmi_id=b.id INNER JOIN tblcomorb c ON m.comorb_id=c.id WHERE a.age_start<=:age and a.age_end>=:age and b.start_bmi<=:bmi and b.end_bmi>=:bmi and c.comorb=:comorb";
 
 	$query = $dbh->prepare($sql);
-	$query->bindParam(':pid', $pid, PDO::PARAM_STR);
-	$query->bindParam(':uid', $uid, PDO::PARAM_STR);
+	$query->bindParam(':age', $age, PDO::PARAM_INT);
+	$query->bindParam(':bmi', $bmi, PDO::PARAM_STR);
+	$query->bindParam(':comorb', $comorb, PDO::PARAM_STR);
 	$query->execute();
-	echo "<script>alert('Package has been booked.');</script>";
-	echo "<script>window.location.href='booking-history.php'</script>";
+	$results = $query->fetchAll(PDO::FETCH_OBJ);
+	foreach ($results as $result) {
+		$result_id = ($result->id);
+	}
+	var_dump($result_id);
+
+	header("Location: dietproresults.php?content_id=$result_id");
+	exit();
 }
 
 ?>
@@ -51,14 +74,14 @@ if (isset($_POST['submit'])) {
 		}
 
 		/* IMAGE STYLES */
-		[type=radio]+img {
-			width: 100%;
-			height: 50vh;
+		[type=radio]+label {
+			width: 20%;
+			height: 5vh;
 			cursor: pointer;
 		}
 
 		/* CHECKED STYLES */
-		[type=radio]:checked+img {
+		[type=radio]:checked+label {
 			outline: 2px solid #fff;
 			border: 2px solid #fff;
 			border-radius: 25px;
@@ -187,7 +210,7 @@ if (isset($_POST['submit'])) {
 			background-color: #f8f8f8;
 			font-size: 16px;
 			color: #555;
-		}	
+		}
 	</style>
 
 </head>
@@ -208,7 +231,7 @@ if (isset($_POST['submit'])) {
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text">DietPro™ </h2>
+					<h2 class="main_text">DietPro™</h2>
 					<h4 class="main_text">An advanced BOT to predict your diet need</h4>
 				</div>
 			</div>
@@ -220,23 +243,20 @@ if (isset($_POST['submit'])) {
 	<section class="pricing-section spad">
 		<div class="container">
 			<div class="row">
-				<form id="questions-form" method="post">
+				<form id="questions-form" action="dietpro.php" method="post">
 					<div id="question1">
-						<label style="width: 100%; font-size: 4vw;">Are you obese?</label>
+						<label style="width: 100%; font-size: 4vw;">Do you have any co-morbidity</label>
 						<div class="qcontainer">
-							<label for="obs-yes" class="image-button">
-								<input type="radio" id="obs-yes" name="obese" value="yes">
-								<img src="img/questions/obese-yes.png" class="imgq" alt="YES">
-								YES
-							</label>
+
+							<input type="radio" id="comorb-yes" name="comorb" value="TRUE">
+							<!-- <img src="img/questions/obese-yes.png" class="imgq" alt="YES"> -->
+							<label for="comorb-yes" class="image-button">YES</label>
 
 						</div>
 						<div class="qcontainer">
-							<label for="obs-no" class="image-button">
-								<input type="radio" id="obs-no" name="obese" value="no">
-								<img src="img/questions/obese-no.png" class="imgq" alt="NO">
-								NO
-							</label>
+							<input type="radio" id="comorb-no" name="comorb" value="FALSE">
+							<!-- <img src="img/questions/obese-no.png" class="imgq" alt="NO"> -->
+							<label for="comorb-no" class="image-button">NO</label>
 						</div>
 						<input type="button" class="buttonrst" value="Next" onclick="viewquestion2()" style="width: 30%">
 					</div>
@@ -257,7 +277,7 @@ if (isset($_POST['submit'])) {
 					<div id="question3" style="display: none;">
 						<label style="width: 100%; font-size: 4vw; padding-bottom:2vh" for="height">Height (cm):</label>
 						<div class="qcontainer" style="width: 100%;">
-							<input type="number" id="height" name="height" min="0" max="100" step="1">
+							<input type="number" id="height" name="height" min="0" max="250" step="1">
 						</div>
 						<label style="width: 100%; font-size: 4vw; padding-bottom:2vh" for="weight">Weight (kg):</label>
 						<div class="qcontainer" style="width: 100%; padding-bottom:5vh">

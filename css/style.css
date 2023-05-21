@@ -4337,3 +4337,21 @@ only screen and (min-width: 576px) and (max-width: 767px),
 .contact-form {
 	padding-top: 10px;
 }
+
+
+/*--------------------------------------------
+			Slider animation
+--------------------------------------------*/
+
+
+#slideshow section {
+	/* position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0; */
+	transition: opacity 0.5s ease;
+  }
+  
+  #slideshow section.active {
+	opacity: 1;
+  }
