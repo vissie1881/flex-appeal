@@ -13,6 +13,10 @@
 			case 'http://localhost/gym/index.php':
 				home.classList.add('active');
 				break;
+				
+			case 'http://localhost/gym/':
+				home.classList.add('active');
+				break;
 			case 'http://localhost/gym/about.php':
 				about.classList.add('active');
 				break;

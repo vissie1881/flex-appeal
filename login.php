@@ -75,7 +75,7 @@ if(isset($_POST['submit'])) {
               </div>
               </form>
               <form class="forget-form" action="index.html">
-              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="registration.php">Don't have account?</a></p>
               </form>
             </div>
 
