@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 	$height = $_POST['height'];
 	$weight = $_POST['weight'];
 
-	$bmi = $weight / ($height * $height);
+	$bmi = $weight / ($height * $height) * 10000;
 
 	$sql = "SELECT m.id as id FROM  mapping m INNER JOIN tblage a ON m.age_id=a.id INNER JOIN tblbmi b ON m.bmi_id=b.id INNER JOIN tblcomorb c ON m.comorb_id=c.id WHERE a.age_start<=:age and a.age_end>=:age and b.start_bmi<=:bmi and b.end_bmi>=:bmi and c.comorb=:comorb";
 
@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
 	}
 	var_dump($result_id);
 
-	header("Location: dietproresults.php?content_id=$result_id");
+	header("Location: dietproresults.php?content_id=$result_id&bmi=$bmi");
 	exit();
 }
 

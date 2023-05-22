@@ -15,6 +15,8 @@ try {
 }
 
 $id = $_GET['content_id'];
+$bmi = $_GET['bmi'];
+$gauge_val=$bmi/40;
 
 
 
@@ -29,32 +31,55 @@ foreach ($results as $result) {
 
 
 
-<!DOCTYPE html>
-<html lang="zxx">
+    <!DOCTYPE html>
+    <html lang="zxx">
 
-<head>
-	<title>Gym Management System</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Ahana Yoga HTML Template">
-	<meta name="keywords" content="yoga, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/owl.carousel.min.css" />
-	<link rel="stylesheet" href="css/nice-select.css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" />
-	<link rel="stylesheet" href="css/slicknav.min.css" />
-	<link rel="stylesheet" href="css/animate.css" />
+    <head>
+        <title>Gym Management System</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ahana Yoga HTML Template">
+        <meta name="keywords" content="yoga, html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="css/nice-select.css" />
+        <link rel="stylesheet" href="css/magnific-popup.css" />
+        <link rel="stylesheet" href="css/slicknav.min.css" />
+        <link rel="stylesheet" href="css/animate.css" />
 
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css" />
+        <!-- Main Stylesheets -->
+        <link rel="stylesheet" href="css/style.css" />
 
     </head>
 
-<body>
-<h1 style="color: black"><?php echo htmlentities($result->content);?></h1>
-</body>
+    <body>
+        <h1 style="color: black"><?php echo htmlentities($result->content); ?></h1>
+
+        <div class="gauge">
+            <div class="gauge__body">
+                <div class="gauge__fill"></div>
+                <div class="gauge__cover"></div>
+            </div>
+        </div>
+
+
+        <script>
+            const gaugeElement = document.querySelector(".gauge");
+
+            function setGaugeValue(gauge, value) {
+                if (value < 0 || value > 1) {
+                    return;
+                }
+
+                gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2}turn)`;
+                gauge.querySelector(".gauge__cover").textContent = `${Math.round(value * 100)}%`;
+            }
+
+            setGaugeValue(gaugeElement, <?php echo $gauge_val;?>);
+        </script>
+    </body>
 <?php
 }
 ?>
