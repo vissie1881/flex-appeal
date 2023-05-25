@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
 require_once('include/config.php');
 
 if(isset($_POST['submit']))
@@ -15,7 +15,8 @@ $pass=md5($Password);
 $RepeatPassword = $_POST['RepeatPassword'];
 
 // Email id Already Exit
-
+$usrdbeml="";
+$usrdbmble="";
 $usermatch=$dbh->prepare("SELECT mobile,email FROM tbluser WHERE (email=:usreml || mobile=:mblenmbr)");
 $usermatch->execute(array(':usreml'=>$email,':mblenmbr'=>$mobile)); 
 while($row=$usermatch->fetch(PDO::FETCH_ASSOC))
