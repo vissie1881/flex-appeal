@@ -1,5 +1,7 @@
 <?php
-
+session_start();
+include 'include/config.php';
+$uid = $_SESSION['uid'];
 error_reporting(0);
 ob_start();
 //DB Connection
