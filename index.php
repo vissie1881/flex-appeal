@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
 			<div class="row">
 				<?php
 
-				$sql = "SELECT id, category, titlename, PackageType, PackageDuratiobn, Price, uploadphoto, Description, create_date from tbladdpackage";
+				$sql = "SELECT id, titlename, PackageDuratiobn, Price, Description, create_date from tbladdpackage";
 				$query = $dbh->prepare($sql);
 				$query->execute();
 				$results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -184,7 +184,7 @@ if (isset($_POST['submit'])) {
 										<input type='hidden' name='pid' value='<?php echo htmlentities($result->id); ?>'>
 
 
-										<input class='site-btn sb-line-gradient' type='submit' name='submit' value='Booking Now' onclick="return confirm('Do you really want to book this package.');">
+										<input class='site-btn sb-line-gradient' type='submit' name='submit' value='Book Now' onclick="return confirm('Do you really want to book this package.');">
 									</form>
 								<?php endif; ?>
 							</div>
