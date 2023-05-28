@@ -66,26 +66,7 @@ if (isset($_POST['submit'])) {
 		}
 	</style>
 
-
-<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
-<link rel="stylesheet" type="text/css" href="css/animate.css">
-
-<link rel="stylesheet" type="text/css" href="css/ham.css">
-
-<link rel="stylesheet" type="text/css" href="css/select.css">
-
-<link rel="stylesheet" type="text/css" href="css/util.css">
-<link rel="stylesheet" type="text/css" href="css/main2.css">
-
-<meta name="robots" content="noindex, follow">
-<script nonce="8b6b0533-bfb5-4491-aa7f-1ea30824f079">(function(w,d){!function(a,b,c,d){a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz.q=[];a.zaraz._f=function(e){return function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const n of Object.entries(Object.entries(dataLayer).reduce(((o,p)=>({...o[1],...p[1]})),{})))zaraz.set(n[0],n[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const q=a.zaraz.q.shift();a[c].q.push(q)}i.defer=!0;for(const r of[localStorage,sessionStorage])Object.keys(r||{}).filter((t=>t.startsWith("_zaraz_"))).forEach((s=>{try{a[c]["z_"+s.slice(7)]=JSON.parse(r.getItem(s))}catch{a[c]["z_"+s.slice(7)]=r.getItem(s)}}));i.referrerPolicy="origin";i.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
-
-
+</head>
 
 <body class="page-top-section set-bg" data-setbg="img/gallery/13.jpg">
 	<!-- Page Preloder -->
@@ -97,46 +78,194 @@ if (isset($_POST['submit'])) {
 
 
 
-	                                                                              
+
 	<!-- Page top Section -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+	<!-- Slideshow start-->
+	<!-- <section id="slider-sect">
+		<section class="page-top-section set-bg" data-setbg="img/gallery/13.jpg" style="display:none" id="back-img-13">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">ABOUT US</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/7.jpg" style="display:none" id="back-img-7">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">ABOUT US</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/8.jpg" style="display:none" id="back-img-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">ABOUT US</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/9.jpg" style="display:none" id="back-img-9">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">ABOUT US</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/10.jpg" style="display:none" id="back-img-10">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">ABOUT US</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/11.jpg" style="display:none" id="back-img-11">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">ABOUT US</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/12.jpg" style="display:none" id="back-img-12">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 m-auto text-white">
+						<h2 class="main_text" styles="font-size=10vh">ABOUT US</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section> -->
+	<!-- Slideshow end -->
+
+	<!-- <section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2 class="main_text">Contact US</h2>
+					<h2 class="main_text">About us</h2>
 				</div>
 			</div>
 		</div>
-	</section>
-
+	</section> -->
 
 
 	<!-- Pricing Section -->
-	<section class="pricing-section spad">
+	<section class="">
 		<div class="container">
+			<!-- <div class="section-title text-center"> -->
+			<!-- <img src="img/icons/logo-icon.png" alt=""> -->
+			<!-- <h2>About Us</h2> -->
+			<!-- </div> -->
+
 
 			<div class="row">
-
 				<div class="col-lg-12 col-sm-6">
-<p><strong>Email:</strong> info@yourdomain.com</p>
-<p><strong>Contact No:</strong> 1234567890, 1122334455</p>
-<p><strong>Address:</strong> Test Address</p>
+					<h2 style="color:aliceblue; z-index:2;"> Contact </h2>
+					<section class="pricing-section spad">
+						<div class="container">
+
+							<div class="row">
+
+								<div class="contact-card">
+									<p><strong>Email:</strong> info@yourdomain.com</p>
+									<p><strong>Contact No:</strong> 1234567890, 1122334455</p>
+									<p><strong>Address:</strong> Test Address</p>
+								</div>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
 		</div>
 	</section>
-	
 
-<script src="vendor/select2/select2.min.js"></script>
 
-<script src="vendor/tilt/tilt.jquery.min.js"></script>
-<script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
+	<!-- Footer Section -->
+	<?php include 'include/footer.php'; ?>
+	<!-- Footer Section end -->
+
+	<div class="back-to-top"><img src="img/icons/up-arrow.png" alt=""></div>
+
+	<!-- Search model end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+		var slide1 = document.getElementById('back-img-13');
+		var slide2 = document.getElementById('back-img-7');
+		var slide3 = document.getElementById('back-img-8');
+		var slide4 = document.getElementById('back-img-9');
+		var slide5 = document.getElementById('back-img-10');
+		var slide6 = document.getElementById('back-img-11');
+		var slide7 = document.getElementById('back-img-12');
+		var i = 0;
+		var intervalTime = 10000; // Interval time in milliseconds (3 seconds)
+
+		function changeSlide() {
+			switch (i % 7) {
+				case 0:
+					slide7.style.display = "none";
+					slide1.style.display = "block";
+					break;
+				case 1:
+					slide1.style.display = "none";
+					slide2.style.display = "block";
+					break;
+				case 2:
+					slide2.style.display = "none";
+					slide3.style.display = "block";
+					break;
+				case 3:
+					slide3.style.display = "none";
+					slide4.style.display = "block";
+					break;
+				case 4:
+					slide4.style.display = "none";
+					slide5.style.display = "block";
+					break;
+				case 5:
+					slide5.style.display = "none";
+					slide6.style.display = "block";
+					break;
+				case 6:
+					slide6.style.display = "none";
+					slide7.style.display = "block";
+					break;
+			}
+
+			i++;
+			setTimeout(changeSlide, intervalTime);
+		}
+
+		// Start the slideshow
+		changeSlide();
 	</script>
 
-<script src="js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
