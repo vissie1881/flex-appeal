@@ -36,7 +36,8 @@ $error="Your current password is not valid.";
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Ahana | Yoga HTML Template</title>
+	<title>BulkBois | Changepassword</title>
+	<link rel="icon" type="image/x-icon" href="img/bell.png">
 	<meta charset="UTF-8">
 	<meta name="description" content="Ahana Yoga HTML Template">
 	<meta name="keywords" content="yoga, html">
@@ -93,15 +94,89 @@ return true;
 
 	                                                                              
 	<!-- Page top Section -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+	<!-- <section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 m-auto text-white">
-					<h2>changepassword</h2>
+					<h2 style="font-size: 75px;">change password</h2>
 				</div>
 			</div>
 		</div>
+	</section> -->
+
+	<!-- Slideshow start-->
+	<section id="slider-sect">
+		<section class="page-top-section set-bg" data-setbg="img/gallery/13.jpg" style="display:none" id="back-img-13">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 m-auto text-white">
+						<h2 class="main_text" styles="font-size: 50px;">Change Password</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/7.jpg" style="display:none" id="back-img-7">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 m-auto text-white">
+						<h2 class="main_text" styles="font-size: 50px;">Change Password</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/8.jpg" style="display:none" id="back-img-8">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 m-auto text-white">
+						<h2 class="main_text" styles="font-size: 50px;">Change Password</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/9.jpg" style="display:none" id="back-img-9">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 m-auto text-white">
+						<h2 class="main_text" styles="font-size: 50px">Change Password</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/10.jpg" style="display:none" id="back-img-10">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 m-auto text-white">
+						<h2 class="main_text" styles="font-size: 50px;">Change Password</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/11.jpg" style="display:none" id="back-img-11">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 m-auto text-white">
+						<h2 class="main_text" styles="font-size:50px; color:red;">Change Password</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-top-section set-bg" data-setbg="img/gallery/12.jpg" style="display:none" id="back-img-12">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 m-auto text-white">
+						<h2 class="main_text" styles="font-size: 50px;">Change Password</h2>
+					</div>
+				</div>
+			</div>
+		</section>
 	</section>
+	<!-- Slideshow end -->
 
 
 
@@ -114,15 +189,15 @@ return true;
 					
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<div class="pricing-item entermediate">
-						<div class="pi-top">
-							<h4>changepassword</h4>
+					<div class="pricing-item entermediate" style="height:440px;">
+						<div class="pi-top" style="height:100px;">
+							<h4>change password</h4>
 						</div>
 						  <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
-						
+						<br>
 						<form class="singup-form contact-form" method="post" onSubmit="return valid();">
-						<div class="row">
+						<div class="row" style="padding-left:50px; padding-right:50px;">
 							<div class="col-md-12">
 								<input type="password" name="password" id="password" placeholder="Old Password" autocomplete="off">
 							</div>
@@ -135,8 +210,9 @@ return true;
 							</div>
 							
 						</div>
+						<br>
 					
-					<input type="submit" id="submit" name="submit" value="Submit" class="site-btn sb-gradient">
+					<input type="submit" id="submit" name="submit" value="Submit" class="site-btn sb-gradient" style="width:50px;">
 </form>
 					</div>
 				</div>
@@ -166,7 +242,60 @@ return true;
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
+	
+
+	<script>
+		var slide1 = document.getElementById('back-img-13');
+		var slide2 = document.getElementById('back-img-7');
+		var slide3 = document.getElementById('back-img-8');
+		var slide4 = document.getElementById('back-img-9');
+		var slide5 = document.getElementById('back-img-10');
+		var slide6 = document.getElementById('back-img-11');
+		var slide7 = document.getElementById('back-img-12');
+		var i = 0;
+		var intervalTime = 3000; // Interval time in milliseconds (3 seconds)
+
+		function changeSlide() {
+			switch (i % 7) {
+				case 0:
+					slide7.style.display = "none";
+					slide1.style.display = "block";
+					break;
+				case 1:
+					slide1.style.display = "none";
+					slide2.style.display = "block";
+					break;
+				case 2:
+					slide2.style.display = "none";
+					slide3.style.display = "block";
+					break;
+				case 3:
+					slide3.style.display = "none";
+					slide4.style.display = "block";
+					break;
+				case 4:
+					slide4.style.display = "none";
+					slide5.style.display = "block";
+					break;
+				case 5:
+					slide5.style.display = "none";
+					slide6.style.display = "block";
+					break;
+				case 6:
+					slide6.style.display = "none";
+					slide7.style.display = "block";
+					break;
+			}
+
+			i++;
+			setTimeout(changeSlide, intervalTime);
+		}
+
+		// Start the slideshow
+		changeSlide();
+	</script>
+
 
 	</body>
 </html>
-<?php } ?>
+<?php } ?>	

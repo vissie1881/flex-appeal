@@ -5,26 +5,31 @@
 		var about = document.getElementById('about_nav');
 		var contact = document.getElementById('contact_nav');
 		var dietpro = document.getElementById('dietpro_nav');
+		var bookinghist = document.getElementById('booking_nav');
 
         //get address of current page
 		var addr= document.location.href;
         //switch case to set selected item as active
 		switch(addr){
-			case 'http://localhost/gym/index.php':
+			case 'http://localhost/index.php':
 				home.classList.add('active');
 				break;
 				
-			case 'http://localhost/gym/':
+			case 'http://localhost/':
 				home.classList.add('active');
 				break;
-			case 'http://localhost/gym/about.php':
+			case 'http://localhost/about.php':
 				about.classList.add('active');
 				break;
-			case 'http://localhost/gym/contact.php':
+			case 'http://localhost/contact.php':
 				contact.classList.add('active');
 				break;
-			case 'http://localhost/gym/dietpro.php':
+			case 'http://localhost/dietpro.php':
 				dietpro.classList.add('active');
+				break;
+				
+			case 'http://localhost/booking-history.php':
+				bookinghist.classList.add('active');
 				break;
 		}
         });
@@ -84,7 +89,7 @@
 					<?php if(strlen($_SESSION['uid'])==0): ?>
 			<!--li><a href="admin/">Admin</a></li-->
 					<?php else :?>
-						<li><a href="booking-history.php">Booking History</a></li>
+						<li><a href="booking-history.php" id="booking_nav">Booking History</a></li>
 						<?php endif;?>
 				</ul>
 			</div>

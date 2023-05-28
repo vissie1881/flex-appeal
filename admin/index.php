@@ -104,12 +104,12 @@ if (strlen($_SESSION['adminid'] == 0)) {
                 </div>
               </div>
             </a>
-          <?php  } ?> 
+          <?php  } ?>
         </div>
 
         <div class="col-md-6 col-lg-6">
           <?php
-          $sql = "SELECT count(id) as totalbookings FROM tblbooking where  paymentType is null or paymentType=''";
+          $sql = "SELECT count(id) as totalemployees FROM tblemployee";
           $query = $dbh->prepare($sql);
           $query->execute();
           $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -118,8 +118,8 @@ if (strlen($_SESSION['adminid'] == 0)) {
             <a href="new-bookings.php">
               <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
                 <div class="info">
-                  <h4>New Bookings</h4>
-                  <p><b><?php echo $result->totalbookings; ?></b></p>
+                  <h4>Employees</h4>
+                  <p><b><?php echo $result->totalemployees; ?></b></p>
                 </div>
               </div>
             </a>
@@ -129,7 +129,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
 
         <div class="col-md-6 col-lg-6">
           <?php
-          $sql = "SELECT count(id) as totalbookings FROM tblbooking where paymentType='Partial Payment'";
+          $sql = "SELECT count(id) as totaltrainers FROM tbltrainer";
           $query = $dbh->prepare($sql);
           $query->execute();
           $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -138,8 +138,8 @@ if (strlen($_SESSION['adminid'] == 0)) {
             <a href="partial-payment-bookings.php">
               <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
                 <div class="info">
-                  <h4>Partial Payment Bookings</h4>
-                  <p><b><?php echo $result->totalbookings; ?></b></p>
+                  <h4>Trainers</h4>
+                  <p><b><?php echo $result->totaltrainers; ?></b></p>
                 </div>
               </div>
             </a>
@@ -155,11 +155,10 @@ if (strlen($_SESSION['adminid'] == 0)) {
           $results = $query->fetchAll(PDO::FETCH_OBJ);
           foreach ($results as $result) {
           ?>
-            <a href="full-payment-bookings.php">
+            <a href="add-employee.php">
               <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
                 <div class="info">
-                  <h4>Full Payment Bookings</h4>
-                  <p><b><?php echo $result->totalbookings; ?></b></p>
+                  <h4>Add Employee</h4>
                 </div>
               </div>
             </a>
@@ -167,7 +166,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
         </div>
 
 
-      </div>
+
 
     </main>
     <!-- Essential javascripts for application to work-->

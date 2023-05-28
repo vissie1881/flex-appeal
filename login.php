@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 error_reporting(0);
@@ -43,10 +42,11 @@ if(isset($_POST['submit'])) {
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>GYM MS | Admin login</title>
+    <title>BulkBois | User login</title>
+	  <link rel="icon" type="image/x-icon" href="img/bell.png">
   </head>
   <body>
-  <section class="vh-100 "
+  <section class="vh-100"
    style = "background-image: url(img/gym.avif) ;background-repeat: no-repeat; background-size: cover ">
    <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
   <div class="container py-5 h-50">
@@ -70,12 +70,13 @@ if(isset($_POST['submit'])) {
               </div>
               <div class="form-outline form-white mb-4">
                 <input type="password" id="password" name="password" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Password</label><br>
+                <label class="form-label" for="typePasswordX" style="padding-bottom:25px;">Password</label><br>
                 <input class="btn btn-outline-light btn-lg px-5" id = "submit" type="submit" name="submit" value="Sign In">
               </div>
               </form>
               <form class="forget-form" action="index.html">
-              <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="registration.php">Don't have account?</a></p>
+              <!-- <p class="small mb-1 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> -->
+              <p class="small mb-3 pb-lg-2"><a style="font-weight: bold; font-size:15px; color: #fff;" href="http://localhost/gym/registration.php">Don't have an account?</a></p>
               </form>
             </div>
 

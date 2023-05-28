@@ -1,7 +1,4 @@
 <?php
-session_start();
-include 'include/config.php';
-$uid = $_SESSION['uid'];
 error_reporting(0);
 ob_start();
 //DB Connection
@@ -42,7 +39,9 @@ if (isset($_POST['submit'])) {
 	header("Location: dietproresults.php?content_id=$result_id&bmi=$bmi");
 	exit();
 }
-
+session_start();
+include 'include/config.php';
+$uid = $_SESSION['uid'];
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
