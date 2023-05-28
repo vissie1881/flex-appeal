@@ -12,7 +12,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
   <head>
     <meta name="description" content="Vali is a responsive">
 
-    <title>Admin | Manage Package </title>
+    <title>Admin | View Trainers </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,22 +34,22 @@ if (strlen($_SESSION['adminid'] == 0)) {
         <div class="col-md-12">
           <div class="tile">
             <div class="tile-body">
-              <h3>Manage Packages</h3>
+              <h3>View Trainers</h3>
               <hr />
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Sr.No</th>
-                    <th>Title</th>
-                    <th>Package Duratiobn</th>
-                    <th>Price</th>
-                    <th>Action</th>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
                   </tr>
                 </thead>
 
                 <?php
                 include  'include/config.php';
-                $sql = "SELECT * FROM tbladdpackage;";
+                $sql = "SELECT * FROM tblemployee;";
                 $query = $dbh->prepare($sql);
 
                 $query->execute();
@@ -61,15 +61,11 @@ if (strlen($_SESSION['adminid'] == 0)) {
 
                     <tbody>
                       <tr>
-                        <td><?php echo ($cnt); ?></td>
-                        <td><?php echo htmlentities($result->titlename); ?></td>
-                        <td><?php echo htmlentities($result->PackageDuratiobn); ?></td>
-                        <td><?php echo htmlentities($result->Price); ?></td>
-                        <?php $id = $result->category_name; ?>
-                        <td>
-
-                          <a href="edit-post.php?pid=<?php echo htmlentities($result->id); ?>"><span class="btn btn-success">Edit</span>
-                        </td>
+                        <td><?php echo htmlentities($result->id); ?></td>
+                        <td><?php echo htmlentities($result->first_name),"   ",htmlentities($result->last_name); ?></td>
+                        <td><?php echo htmlentities($result->designation); ?></td>
+                        <td><?php echo htmlentities($result->email); ?></td>
+                        <td><?php echo htmlentities($result->phone); ?></td>
                       </tr>
 
 

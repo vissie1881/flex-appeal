@@ -52,9 +52,9 @@ if (strlen($_SESSION['adminid'] == 0)) {
           foreach ($results as $result) {
           ?>
             <a href="add-post.php">
-              <div class="widget-small icon border border-solid"><i class="icon fa fa-files-o fa-3x"></i>
+              <div class="widget-small icon border border-solid bg-secondary bg-secondary bg-secondary"><i class="icon fa fa-files-o fa-3x"></i>
                 <div class="info">
-                  <h4>Add Membership Package</h4>
+                  <h4 style="color:white">Add Membership Package</h4>
                   <p><b><?php echo $result->totalcat; ?></b></p>
                 </div>
               </div>
@@ -75,9 +75,9 @@ if (strlen($_SESSION['adminid'] == 0)) {
           ?>
 
               <a href="manage-post.php">
-                <div class="widget-small icon border border-dotted"><i class="icon fa fa-file fa-3x"></i>
+                <div class="widget-small icon border border-dotted bg-secondary"><i class="icon fa fa-file fa-3x"></i>
                   <div class="info">
-                    <h4>View Membership Packages</h4>
+                    <h4 style="color:white">View Membership Packages</h4>
                     <p><b><?php echo $result->totalpost; ?></b></p>
                   </div>
                 </div>
@@ -97,9 +97,9 @@ if (strlen($_SESSION['adminid'] == 0)) {
           foreach ($results as $result) {
           ?>
             <a href="booking-history.php">
-              <div class="widget-small icon border border-solid"><i class="icon fa fa-users fa-3x"></i>
+              <div class="widget-small icon border border-solid bg-secondary"><i class="icon fa fa-users fa-3x"></i>
                 <div class="info">
-                  <h4>Bookings</h4>
+                  <h4 style="color:white">Bookings</h4>
                   <p><b><?php echo $result->totalbookings; ?></b></p>
                 </div>
               </div>
@@ -115,10 +115,10 @@ if (strlen($_SESSION['adminid'] == 0)) {
           $results = $query->fetchAll(PDO::FETCH_OBJ);
           foreach ($results as $result) {
           ?>
-            <a href="new-bookings.php">
-              <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
+            <a href="employee.php">
+              <div class="widget-small icon border border-solid bg-secondary bg-secondary bg-secondary"><i class="icon fa fa-user fa-3x"></i>
                 <div class="info">
-                  <h4>Employees</h4>
+                  <h4 style="color:white">Employees</h4>
                   <p><b><?php echo $result->totalemployees; ?></b></p>
                 </div>
               </div>
@@ -135,10 +135,10 @@ if (strlen($_SESSION['adminid'] == 0)) {
           $results = $query->fetchAll(PDO::FETCH_OBJ);
           foreach ($results as $result) {
           ?>
-            <a href="partial-payment-bookings.php">
-              <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
+            <a href="trainers.php">
+              <div class="widget-small icon border border-solid bg-secondary bg-secondary bg-secondary"><i class="icon fa fa-user fa-3x"></i>
                 <div class="info">
-                  <h4>Trainers</h4>
+                  <h4 style="color:white">Trainers</h4>
                   <p><b><?php echo $result->totaltrainers; ?></b></p>
                 </div>
               </div>
@@ -156,9 +156,9 @@ if (strlen($_SESSION['adminid'] == 0)) {
           foreach ($results as $result) {
           ?>
             <a href="add-employee.php">
-              <div class="widget-small icon border border-solid"><i class="icon fa fa-user fa-3x"></i>
+              <div class="widget-small icon border border-solid bg-secondary bg-secondary bg-secondary"><i class="icon fa fa-user fa-3x"></i>
                 <div class="info">
-                  <h4>Add Employee</h4>
+                  <h4 style="color:white">Add Employee</h4>
                 </div>
               </div>
             </a>
