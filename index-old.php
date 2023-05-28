@@ -6,18 +6,16 @@ $uid = $_SESSION['uid'];
 
 if (isset($_POST['submit'])) {
 	$pid = $_POST['pid'];
-	$price = $_POST['price'];
 
 
-	$sql = "INSERT INTO tblbooking (package_id,userid,paymentType,payment) Values(:pid,:uid,'CARD',:payamt)";
+	$sql = "INSERT INTO tblbooking (package_id,userid) Values(:pid,:uid)";
 
 	$query = $dbh->prepare($sql);
 	$query->bindParam(':pid', $pid, PDO::PARAM_STR);
 	$query->bindParam(':uid', $uid, PDO::PARAM_STR);
-	$query->bindParam(':payamt', $price, PDO::PARAM_STR);
 	$query->execute();
-	echo "<script>alert('You are being redirected to Payment portal');</script>";
-	echo "<script>window.location.href='/payment.php'</script>";
+	echo "<script>alert('Package has been booked.');</script>";
+	echo "<script>window.location.href='booking-history.php'</script>";
 }
 
 ?>
@@ -49,7 +47,7 @@ if (isset($_POST['submit'])) {
 <body>
 	<!-- Page Preloder -->
 
-	<section id="slider-sect">
+
 	<!-- Header Section -->
 	<?php include 'include/header.php'; ?>
 	<!-- Header Section end -->
@@ -58,7 +56,7 @@ if (isset($_POST['submit'])) {
 
 
 	<!-- Slideshow start-->
-	
+	<section id="slider-sect">
 		<section class="page-top-section set-bg" data-setbg="img/gallery/13.jpg" style="display:none" id="back-img-13">
 			<div class="container">
 				<div class="row">
@@ -151,7 +149,7 @@ if (isset($_POST['submit'])) {
 			<div class="row">
 				<?php
 
-				$sql = "SELECT id, titlename, PackageDuratiobn, Price, Description, create_date from tbladdpackage";
+				$sql = "SELECT id, category, titlename, PackageType, PackageDuratiobn, Price, uploadphoto, Description, create_date from tbladdpackage";
 				$query = $dbh->prepare($sql);
 				$query->execute();
 				$results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -184,10 +182,9 @@ if (isset($_POST['submit'])) {
 									<!-- <a href="#" class="site-btn sb-line-gradient">Booking Now</a> -->
 									<form method='post'>
 										<input type='hidden' name='pid' value='<?php echo htmlentities($result->id); ?>'>
-										<input type='hidden' name='price' value='<?php echo htmlentities($result->Price); ?>'>
 
 
-										<input class='site-btn sb-line-gradient' type='submit' name='submit' value='Book Now' onclick="return confirm('Do you really want to book this package.');">
+										<input class='site-btn sb-line-gradient' type='submit' name='submit' value='Booking Now' onclick="return confirm('Do you really want to book this package.');">
 									</form>
 								<?php endif; ?>
 							</div>

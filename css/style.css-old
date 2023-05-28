@@ -1,4 +1,12 @@
+/* =================================
+------------------------------------
+  Ahana | Yoga HTML Template
+  Version: 1.0
+ ------------------------------------
+ ====================================*/
 
+/*----------------------------------------*/
+/* Template default CSS
 /*----------------------------------------*/
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Playfair+Display:400,400i,700,700i&display=swap");
@@ -204,7 +212,7 @@ ol {
 }
 
 .site-btn.sb-gradient {
-	color: #462173;
+	color: #fff;
 	padding: 13px 29px;
 	position: relative;
 	-webkit-transition: all 0.4s;
@@ -357,7 +365,7 @@ ol {
 
 .header-top {
 	padding: 0 80px;
-	background: #000;
+	background: rgba(58, 58, 59, 0.862);
 }
 
 
@@ -403,7 +411,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .header-info i {
 	font-size: 6vh;
-	color: #fff;
+	color: #a7a7a7;
 	margin-right: 10px;
 	position: relative;
 
@@ -413,7 +421,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	font-size: larger;
 	position: relative;
 	top: 0.35vh;
-	color: #fff;
+	color: #fff3f3;
 	margin-bottom: 0;
 }
 
@@ -564,7 +572,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .main-menu .sub-menu li a {
 	font-size: 16px;
-	color: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+	color: #666666;
 	text-transform: none;
 	font-weight: 400;
 	position: relative;
@@ -638,9 +646,10 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 @media only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 576px) {
-	.slicknav_btn {position: relative;
-		top: 0;
-		right: 102px;
+	.slicknav_btn {
+		background: -o-linear-gradient(305deg, #f65d5d 0%, #fdb07d 100%);
+		background: linear-gradient(145deg, #f65d5d 0%, #fdb07d 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f65d5d", endColorstr="#fdb07d", GradientType=1);
 	}
 }
 
@@ -2378,7 +2387,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 ---------------------*/
 
 .pricing-section {
-	background: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+	background: rgba(58, 58, 59, 0.862);
 }
 
 .pricing-item {
@@ -2720,7 +2729,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 ==================*/
 
 .page-top-section {
-	height: 100vh;
+	height: 75vh;
 	position: relative;
 	padding-top: 220px;
 	text-align: center;
@@ -2742,9 +2751,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	height: 100%;
 	left: 0;
 	top: 0;
-	z-index: -1;
 	opacity: 0.92;
-	filter: alpha(opacity=100);
+	filter: alpha(opacity=92);
 }
 
 .page-top-section .container {
@@ -4408,5 +4416,3 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	padding-bottom: 25%;
 	box-sizing: border-box;
   }
-
-
