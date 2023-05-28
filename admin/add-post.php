@@ -10,8 +10,8 @@ if(isset($_POST['Submit'])){
 $category = $_POST['category'];
 $titlename = $_POST['titlename'];$package = $_POST['package'];$packageduratiobn = $_POST['packageduratiobn'];$Price = $_POST['Price'];$photo = $_POST['photo'];$description = $_POST['description'];
 
-$sql="INSERT INTO tbladdpackage (category,titlename,PackageType,PackageDuratiobn,Price,uploadphoto,Description) 
-Values(:category,:titlename,:package,:packageduratiobn,:Price,:photo,:description)";
+$sql="INSERT INTO tbladdpackage (titlename,PackageDuratiobn,Price,uploadphoto,Description) 
+Values(,:titlename,:packageduratiobn,:Price,:photo,:description)";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':category',$category,PDO::PARAM_STR);
 $query->bindParam(':titlename',$titlename,PDO::PARAM_STR);
@@ -73,27 +73,6 @@ $errormsg= "Data not insert successfully";
           <?php } ?>
             <div class="tile-body">
               <form class="row" method="post">
-                <div class="form-group col-md-6">
-                  <label class="control-label">Category</label>
-                 <select name="category" id="category" class="form-control" onChange="getdistrict(this.value);">
-                  <option value="NA">--select--</option>
-                  <?php 
-                  $stmt = $dbh->prepare("SELECT * FROM tblcategory ORDER BY category_name");
-                  $stmt->execute();
-                  $countriesList = $stmt->fetchAll();
-                  foreach($countriesList as $country){
-                  echo "<option value='".$country['id']."'>".$country['category_name']."</option>";
-                  }
-                  ?>
-                  </select>
-                 </select>
-                </div>
-                 <div class="form-group col-md-6">
-                  <label class="control-label">Package Type</label>
-                   <select name="package" id="package" class="form-control">
-                   <option value="NA">--select--</option>
-                 </select>
-                </div>
 
                 <div class="form-group col-md-6">
                   <label class="control-label">Title Name</label>

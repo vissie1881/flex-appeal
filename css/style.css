@@ -204,7 +204,7 @@ ol {
 }
 
 .site-btn.sb-gradient {
-	color: #fff;
+	color: #462173;
 	padding: 13px 29px;
 	position: relative;
 	-webkit-transition: all 0.4s;
@@ -638,10 +638,9 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 @media only screen and (min-width: 576px) and (max-width: 767px),
 (max-width: 576px) {
-	.slicknav_btn {
-		background: -o-linear-gradient(305deg, #f65d5d 0%, #fdb07d 100%);
-		background: linear-gradient(145deg, #f65d5d 0%, #fdb07d 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f65d5d", endColorstr="#fdb07d", GradientType=1);
+	.slicknav_btn {position: relative;
+		top: 0;
+		right: 102px;
 	}
 }
 
@@ -4410,25 +4409,4 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	box-sizing: border-box;
   }
 
-.social-link {
-	width: 30px;
-	height: 30px;
-	border: 1px solid #ddd;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #666;
-	border-radius: 50%;
-	transition: all 0.3s;
-	font-size: 0.9rem;
-  }
-  
-  .social-link:hover,
-  .social-link:focus {
-	background: #ddd;
-	text-decoration: none;
-	color: #555;
-  }
-  .aboutus{
-	background: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%) ;
-  }
+

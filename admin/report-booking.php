@@ -1,5 +1,5 @@
 <?php session_start();
-error_reporting(0);
+error_reporting(E_ALL);
 include  'include/config.php'; 
 if (strlen($_SESSION['adminid']==0)) {
   header('location:logout.php');
@@ -77,23 +77,18 @@ if(Isset($_POST['Submit'])){?>
         <th>PackageDuratiobn</th>
         <th>price</th>
         <th hidden>Description</th>
-        <th>category_name</th>
-        <th>PackageName</th>
+        <th>Package name</th>
         
                     
                   </tr>
                 </thead>
                   <?php
                   $sql="SELECT t1.id as bookingid,t3.fname as Name, t3.email as email,t1.booking_date as bookingdate,t2.titlename as title,t2.PackageDuratiobn as PackageDuratiobn,
-t2.Price as Price,t2.Description as Description,t4.category_name as category_name,t5.PackageName as PackageName FROM tblbooking as t1
+t2.Price as Price,t2.Description as Description FROM tblbooking as t1
  join tbladdpackage as t2
 on t1.package_id =t2.id
 join tbluser as t3
 on t1.userid=t3.id
-join tblcategory as t4
-on t2.category=t4.id
-join tblpackage as t5
-on t2.PackageType=t5.id
 where date(booking_date) between :fdate and :tdate";
                   $query= $dbh->prepare($sql);
                   $query->bindParam(':fdate',$fdate, PDO::PARAM_STR);
@@ -118,8 +113,7 @@ where date(booking_date) between :fdate and :tdate";
                     <td><?php echo htmlentities($result->PackageDuratiobn);?></td>
                     <td><?php echo $result->Price;?></td>
                     <td hidden><?php echo $result->Description;?></td>
-                    <td><?php echo htmlentities($result->category_name);?></td>
-                    <td><?php echo htmlentities($result->PackageName);?></td>
+                    <td><?php echo htmlentities($result->title);?></td>
                      
                   </tr>
                     <?php  $cnt=$cnt+1; } } ?>

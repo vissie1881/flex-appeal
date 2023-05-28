@@ -6,16 +6,18 @@ $uid = $_SESSION['uid'];
 
 if (isset($_POST['submit'])) {
 	$pid = $_POST['pid'];
+	$price = $_POST['price'];
 
 
-	$sql = "INSERT INTO tblbooking (package_id,userid) Values(:pid,:uid)";
+	$sql = "INSERT INTO tblbooking (package_id,userid,paymentType,payment) Values(:pid,:uid,'CARD',:payamt)";
 
 	$query = $dbh->prepare($sql);
 	$query->bindParam(':pid', $pid, PDO::PARAM_STR);
 	$query->bindParam(':uid', $uid, PDO::PARAM_STR);
+	$query->bindParam(':payamt', $price, PDO::PARAM_STR);
 	$query->execute();
-	echo "<script>alert('Package has been booked.');</script>";
-	echo "<script>window.location.href='booking-history.php'</script>";
+	echo "<script>alert('You are being redirected to Payment portal');</script>";
+	echo "<script>window.location.href='/payment.php'</script>";
 }
 
 ?>
@@ -182,6 +184,7 @@ if (isset($_POST['submit'])) {
 									<!-- <a href="#" class="site-btn sb-line-gradient">Booking Now</a> -->
 									<form method='post'>
 										<input type='hidden' name='pid' value='<?php echo htmlentities($result->id); ?>'>
+										<input type='hidden' name='price' value='<?php echo htmlentities($result->Price); ?>'>
 
 
 										<input class='site-btn sb-line-gradient' type='submit' name='submit' value='Book Now' onclick="return confirm('Do you really want to book this package.');">

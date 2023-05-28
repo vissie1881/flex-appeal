@@ -1,5 +1,5 @@
 <?php session_start();
-error_reporting(0);
+error_reporting(E_ALL);
 require_once('include/config.php');
 if(strlen( $_SESSION["uid"])==0)
     {   
@@ -67,8 +67,6 @@ $uid=$_SESSION['uid'];
         <th>PackageDuratiobn</th>
         <th>price</th>
         <th>Description</th>
-        <th>category_name</th>
-        <th>PackageName</th>
         <th>Action</th>
 
 
@@ -78,15 +76,11 @@ $uid=$_SESSION['uid'];
           $uid=$_SESSION['uid'];
                   /*$sql="select id, product_id, userid, product_title, packages, category, PackageDuratiobn, price, descripation, booking_date from tblbooking where userid=:uid";*/
                   $sql="SELECT t1.id as bookingid,t3.fname as Name, t3.email as email,t1.booking_date as bookingdate,t2.titlename as title,t2.PackageDuratiobn as PackageDuratiobn,
-t2.Price as Price,t2.Description as Description,t4.category_name as category_name,t5.PackageName as PackageName FROM tblbooking as t1
+t2.Price as Price,t2.Description as Description FROM tblbooking as t1
  join tbladdpackage as t2
 on t1.package_id =t2.id
 join tbluser as t3
 on t1.userid=t3.id
-join tblcategory as t4
-on t2.category=t4.id
-join tblpackage as t5
-on t2.PackageType=t5.id
 where t1.userid=:uid";
                   $query= $dbh->prepare($sql);
                   $query->bindParam(':uid',$uid, PDO::PARAM_STR);
@@ -110,8 +104,6 @@ where t1.userid=:uid";
                     <td><?php echo htmlentities($result->PackageDuratiobn);?></td>
                     <td><?php echo $result->Price;?></td>
                     <td><?php echo $result->Description;?></td>
-                    <td><?php echo htmlentities($result->category_name);?></td>
-                    <td><?php echo htmlentities($result->PackageName);?></td>
                     <td><a href="booking-details.php?bookingid=<?php echo htmlentities($result->bookingid);?>"><button class="btn btn-primary" type="button">View</button></td>
                   </tr>
                     <?php  $cnt=$cnt+1; } } ?>
