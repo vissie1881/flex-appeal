@@ -65,6 +65,17 @@ $error="Your current password is not valid.";
 			.header-top{
 				background-color: rgba(0,0,0,0);
 			}
+			.singup-form input{
+				border-radius: 0px;
+				border-color: rgba(2, 2, 2, 0.5);
+				color: #312849;
+				/* background-color: #b7babd;
+				color: #fff;
+				border-top: rgba(0, 0, 0, 0);
+				border-left: rgba(0, 0, 0, 0);
+				border-right: rgba(0, 0, 0, 0);
+				border-bottom: black solid 1px; */
+			}
 		</style>
 
 </head>
